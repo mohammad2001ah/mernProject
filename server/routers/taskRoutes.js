@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {createUser,LoginUser} = require('../controller/userController');
+const {createUser,LoginUser,getAllUser,deleteUserByID } = require('../controller/userController');
 const {addTask,updateTask,getAllTask,deleteTask} = require('../controller/taskController');
 
 //router for create user
 router.post('/user',createUser);
+//router for get all user
+router.get('/user',getAllUser);
 // Route to login a user
 router.post('/user/login',LoginUser);
 //Router for add task
@@ -15,6 +17,8 @@ router.get('/task',getAllTask);
 router.put('/task/:id',updateTask);
 //router for delete task
 router.delete('/task/:id',deleteTask);
+//router for delete user
+router.delete('/user/:id',deleteUserByID);
 
 
 
