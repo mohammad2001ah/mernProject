@@ -10,7 +10,11 @@ try {
     const{name,email,password}=req.body;
     //for encrypt  passwords
     const hashPassword= await bcrypt.hash(password,10);
-    const user ={name:name,email:email,password:hashPassword};
+    const user ={
+      name:name,
+      email:email,
+      password:hashPassword
+    };
     const newUser= new User(user);
     await newUser.save();
     res.status(201).json({
