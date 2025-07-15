@@ -20,6 +20,20 @@ exports.getAllTask = async (req,res)=>{
       
   }
 }
+//get task by id
+exports.getTaskById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const task = await Task.findById(id);
+    if (!task) {
+      return res.status(404).json({ message: "Task Not Found" });
+    }
+    res.status(200).json({ task: task });
+  } catch (error) {
+    console.error("Get Task By Id Error:", error.message);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
 //add task
 exports.addTask=async(req,res)=>{
   try {
@@ -70,14 +84,15 @@ exports.updateTask=async(req,res)=>{
     const {title,description,status}=req.body;
 
     const updateTask =await Task.findByIdAndUpdate(id
-      ,{title,description,status}
+      ,{title,description,status},
+      {new:true}
     );
     if(!updateTask){
       return res.status(404).json({message:"TASK Not Found"});
     }
     res.status(200).json({
       message: "Task updated successfully",
-      task: updatedTask
+      task: updateTask
     });
   } catch (error) {
     console.error("Update Task Error:", error.message);

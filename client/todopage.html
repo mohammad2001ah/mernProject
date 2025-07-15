@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../client/css/todo.css">
+
+  <style>
+    .todo-header {
+      margin: 40px 0 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .card {
+      border-left: 5px solid #007bff;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .border-left-primary {
+      border-left-color: #007bff !important;
+    }
+
+    .border-left-success {
+      border-left-color: #28a745 !important;
+    }
+
+    .badge {
+      font-size: 0.9rem;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <h2 class="todo-header"><i class="bi bi-check2-square"></i><a style="color: #c82333;" href="homePage.html">TODO
+        List</a><br>This Page Just For View</h2>
+
+    <!-- Static Task Cards -->
+    <div class="row" id="taskContainer">
+      <!-- Task Card 1 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-primary shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Buy Groceries</h5>
+            <p class="card-text">Milk, Bread, Eggs, Fruits</p>
+            <span class="badge badge-warning">Pending</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 2 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-success shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Complete Homework</h5>
+            <p class="card-text">Finish React.js assignment</p>
+            <span class="badge badge-success">Done</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 3 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-primary shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Workout</h5>
+            <p class="card-text">1 hour gym session</p>
+            <span class="badge badge-warning">Pending</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 4 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-success shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Meeting with Team</h5>
+            <p class="card-text">Project planning and updates</p>
+            <span class="badge badge-success">Done</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 5 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-primary shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Clean the House</h5>
+            <p class="card-text">Vacuum and dust all rooms</p>
+            <span class="badge badge-warning">Pending</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 6 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-success shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Read a Book</h5>
+            <p class="card-text">Finish 3 chapters of Atomic Habits</p>
+            <span class="badge badge-success">Done</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 7 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-primary shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Call Mom</h5>
+            <p class="card-text">Check on how she's doing</p>
+            <span class="badge badge-warning">Pending</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 8 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-success shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Fix the Sink</h5>
+            <p class="card-text">Call plumber or try DIY</p>
+            <span class="badge badge-success">Done</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Card 9 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card border-left-primary shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Plan Vacation</h5>
+            <p class="card-text">Search for hotels and tickets</p>
+            <span class="badge badge-warning">Pending</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
