@@ -4,7 +4,7 @@ const {createUser,LoginUser,getAllUser,deleteUserByID } = require('../controller
 const {addTask,updateTask,getAllTask,deleteTask} = require('../controller/taskController');
 
 //router for create user
-router.post('/user',createUser);
+router.post('/user/create',createUser);
 //router for get all user
 router.get('/user',getAllUser);
 // Route to login a user
