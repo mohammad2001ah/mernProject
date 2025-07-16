@@ -63,7 +63,7 @@ body {
   color: #a71d2a;
 }
 .card {
-  border-left: 5px solid #007bff; 
+  border-left: 5px solid #a71d2a; 
   border-radius: 10px;
   transition: transform 0.3s ease;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
